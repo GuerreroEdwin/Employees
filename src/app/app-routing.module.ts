@@ -5,12 +5,10 @@ const routes: Routes = [
   {
     path: 'employee',
     loadChildren: () => import('./employee/employee.module')
-      .then( m => m.EmployeeModule ),
+      .then( m => m.EmployeeModule )
   },
   {
-    path: '**',
-    // component: ErrorPageComponent
-    redirectTo: 'employee'
+    path: '**', redirectTo: 'employee'
   }
 ];
 
