@@ -1,4 +1,5 @@
-export interface ResponseEdwin {
+export interface ResponseApi
+ {
     status:  string;
     data:    Employee[];
     message: string;

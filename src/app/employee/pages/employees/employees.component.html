@@ -1,0 +1,16 @@
+<div class="container">
+    <div id="card"
+        *ngFor="let emp of res; index as i">
+      <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{res[i].employee_name}}</h5>
+        </div>
+        <button  type="button" 
+                 class="btn btn-dark"
+                 routerLink="./employee/emp">
+                 Ver mas...
+        </button>
+      </div>
+    </div>
+  </div>
+  

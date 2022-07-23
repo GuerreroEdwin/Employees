@@ -8,7 +8,7 @@ const routes: Routes = [
       .then( m => m.EmployeeModule )
   },
   {
-    path: '**', redirectTo: 'employee'
+    path: '**', pathMatch:'full', redirectTo: 'employee'
   }
 ];
 

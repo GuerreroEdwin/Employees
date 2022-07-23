@@ -4,7 +4,8 @@ import { Observable } from 'rxjs';
 
 
 import { environment } from 'src/environments/environment';
-import { ResponseEdwin } from 'src/app/interfaces/employee.interface';
+import { ResponseApi } from 'src/app/interfaces/employee.interface';
+import { Employee } from '../../interfaces/employee.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -15,14 +16,13 @@ export class EmployeeService {
 
   constructor( private http: HttpClient ) { }
 
-  getEmployees(): Observable <ResponseEdwin> {
-    return this.http.get<ResponseEdwin>(`${this.baseUrl}s`);
+  getEmployees(): Observable <ResponseApi> {
+    return this.http.get<ResponseApi>(`${this.baseUrl}s`);
   }
 
-  getEmployeePorId( id: number ):Observable<ResponseEdwin> {
-    return this.http.get<ResponseEdwin>(`${ this.baseUrl }/${ id }`);
+  getEmployeePorId( id: Employee ):Observable<Employee> {
+    return this.http.get<Employee>(`${ this.baseUrl }/${ id }`);
   }
- 
 
   // getSugerencias( termino: string ): Observable<ResponseEdwin> {
   //   return this.http.get<ResponseEdwin>(`${ this.baseUrl }/employees?q=${ termino }&_limit=6`);

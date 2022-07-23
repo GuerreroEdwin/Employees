@@ -1,17 +1,16 @@
-import { Component, OnInit, Output } from '@angular/core';
-
-import { EmployeeService } from '../../services/employee.service';
-import { Employee } from 'src/app/interfaces/employee.interface';
 import { HttpErrorResponse } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { Employee } from 'src/app/interfaces/employee.interface';
+import { EmployeeService } from '../../services/employee.service';
 
 @Component({
-  selector: 'app-listado',
-  templateUrl: './listado.component.html',
-  styleUrls: []
+  selector: 'app-employees',
+  templateUrl: './employees.component.html',
+  styleUrls: ['./employees.component.css']
 })
-export class ListadoComponent implements OnInit {
+export class EmployeesComponent implements OnInit {
 
-  @Output() res!: Employee[];
+  res!: Employee[];
 
   constructor( private employeeService: EmployeeService) {}
  
@@ -26,6 +25,4 @@ export class ListadoComponent implements OnInit {
     });
 
   }
-
-      
 }
