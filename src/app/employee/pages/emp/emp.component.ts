@@ -1,15 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+
+import { HttpErrorResponse } from '@angular/common/http';
+import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
+
+import { Employee } from 'src/app/interfaces/employee.interface';
+import { EmployeeService } from '../../services/employee.service';
 
 @Component({
   selector: 'app-emp',
   templateUrl: './emp.component.html',
-  styleUrls: ['./emp.component.css']
+  styleUrls: []
 })
-export class EmpComponent implements OnInit {
+export class EmpComponent  {
 
-  constructor() { }
+ 
+  // res!: Employee;
 
-  ngOnInit(): void {
-  }
+  // constructor( private activatedRoute: ActivatedRoute,
+  //              private heroesService: EmployeeService,
+  //              private router: Router ) { }
 
+  // ngOnInit(): void {
+
+  //   this.activatedRoute.params
+  //     .pipe(
+  //       switchMap( ({ id }) => this.heroesService.getEmployeePorId(id) )
+  //     ).subscribe( responseApi => { 
+  //       this.res = responseApi;
+  //       console.log(this.res);
+  //     }
+  //     ,(error: HttpErrorResponse) => {
+  //       console.log(error.status);
+  //     });
+
+  // }
+
+  // regresar() {
+  //   this.router.navigate(['/employee/home']);
+  // }
 }

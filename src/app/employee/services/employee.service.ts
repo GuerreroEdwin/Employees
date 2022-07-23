@@ -16,12 +16,13 @@ export class EmployeeService {
   constructor( private http: HttpClient ) { }
 
   getEmployees(): Observable <ResponseEdwin> {
-    return this.http.get<ResponseEdwin>(`${this.baseUrl}`);
+    return this.http.get<ResponseEdwin>(`${this.baseUrl}s`);
   }
 
-  // getEmployeePorId( id: string ):Observable<ResponseEdwin> {
-  //   return this.http.get<ResponseEdwin>(`${ this.baseUrl }/employees/${ id }`);
-  // }
+  getEmployeePorId( id: number ):Observable<ResponseEdwin> {
+    return this.http.get<ResponseEdwin>(`${ this.baseUrl }/${ id }`);
+  }
+ 
 
   // getSugerencias( termino: string ): Observable<ResponseEdwin> {
   //   return this.http.get<ResponseEdwin>(`${ this.baseUrl }/employees?q=${ termino }&_limit=6`);
