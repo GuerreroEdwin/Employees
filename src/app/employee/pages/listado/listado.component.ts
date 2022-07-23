@@ -21,13 +21,12 @@ export class ListadoComponent implements OnInit {
     // this.employeeService.getEmployees()
     //   .subscribe( employees=>{console.log(employees);});
 
-    this.employeeService.getEmployees().subscribe( responseApi => {
-      this.res = responseApi.data;
+    this.employeeService.getEmployees()
+    .subscribe( responseApi => {this.res = responseApi.data;
       console.log(this.res);
     },(error: HttpErrorResponse) => {
       console.log(error.status);
-
-    });;
+    });
 
   }
 

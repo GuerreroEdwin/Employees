@@ -19,12 +19,12 @@ export class EmployeeService {
     return this.http.get<ResponseEdwin>(`${this.baseUrl}`);
   }
 
-  // getEmployeePorId( id: string ):Observable<Employee> {
-  //   return this.http.get<Employee>(`${ this.baseUrl }/employees/${ id }`);
+  // getEmployeePorId( id: string ):Observable<ResponseEdwin> {
+  //   return this.http.get<ResponseEdwin>(`${ this.baseUrl }/employees/${ id }`);
   // }
 
-  // getSugerencias( termino: string ): Observable<Employee[]> {
-  //   return this.http.get<Employee[]>(`${ this.baseUrl }/employees?q=${ termino }&_limit=6`);
+  // getSugerencias( termino: string ): Observable<ResponseEdwin> {
+  //   return this.http.get<ResponseEdwin>(`${ this.baseUrl }/employees?q=${ termino }&_limit=6`);
   // }
 
 }
