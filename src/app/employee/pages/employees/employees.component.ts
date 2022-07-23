@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Employee } from 'src/app/interfaces/employee.interface';
 import { EmployeeService } from '../../services/employee.service';
 
@@ -10,19 +11,25 @@ import { EmployeeService } from '../../services/employee.service';
 })
 export class EmployeesComponent implements OnInit {
 
-  res!: Employee[];
+  employees!: Employee[];
 
-  constructor( private employeeService: EmployeeService) {}
+  constructor( private employeeService: EmployeeService,
+              private router: Router ) {}
  
 
   ngOnInit(): void {
 
     this.employeeService.getEmployees()
-    .subscribe( responseApi => { this.res = responseApi.data;
-      console.log(this.res);
+    .subscribe( responseApi => { this.employees = responseApi.data;
+      console.log(this.employees);
     },(error: HttpErrorResponse) => {
       console.log(error.status);
     });
 
+  }
+
+  goEmployeeById(id: number){
+    this.router.navigate([`/employee/${id}`])
+      console.log("edwin no olvidar pasar id: "+ id );
   }
 }

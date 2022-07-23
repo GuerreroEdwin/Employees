@@ -1,13 +1,14 @@
 <div class="container">
     <div id="card"
-        *ngFor="let emp of res; index as i">
-      <div class="card" style="width: 18rem;">
+        *ngFor="let employee of employees; index as i">
+      <div class="card" style="width: 15rem;">
         <div class="card-body">
-          <h5 class="card-title">{{res[i].employee_name}}</h5>
+          <h5 class="card-title">{{employee.employee_name}}</h5>
         </div>
         <button  type="button" 
-                 class="btn btn-dark"
-                 routerLink="./employee/emp">
+                 class="btn btn-ligth"
+                 (click)="goEmployeeById(employee.id)"
+                 routerLink="./employee/employeeBy/:id">
                  Ver mas...
         </button>
       </div>

@@ -24,8 +24,4 @@ export class EmployeeService {
     return this.http.get<Employee>(`${ this.baseUrl }/${ id }`);
   }
 
-  // getSugerencias( termino: string ): Observable<ResponseEdwin> {
-  //   return this.http.get<ResponseEdwin>(`${ this.baseUrl }/employees?q=${ termino }&_limit=6`);
-  // }
-
 }

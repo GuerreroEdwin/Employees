@@ -8,9 +8,9 @@ import { EmployeeByIdComponent } from './pages/employee-by-id/employee-by-id.com
 
 const routes: Routes = [
   
-  { path: '', component: EmployeesComponent},
-  { path: ':id', component: EmployeeByIdComponent },
-  { path: '**', redirectTo: '' }
+  { path: 'employee', component: EmployeesComponent},
+  { path: 'employee/:id', component: EmployeeByIdComponent},
+  { path: '**', redirectTo: 'employee' }
 ];
 
 @NgModule({
