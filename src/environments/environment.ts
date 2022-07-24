@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl:'https://dummy.restapiexample.com/api/v1/employee'
+  baseUrl:'https://dummy.restapiexample.com/api/v1/'
 };
 
 /*

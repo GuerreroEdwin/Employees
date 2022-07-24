@@ -20,9 +20,11 @@ export class EmployeesComponent implements OnInit {
   ngOnInit(): void {
 
     this.employeeService.getEmployees()
-    .subscribe( responseApi => { this.employees = responseApi.data;
+    .subscribe( responseApi => { 
+      this.employees = responseApi.data;
       console.log(this.employees);
-    },(error: HttpErrorResponse) => {
+    },
+    (error: HttpErrorResponse) => {
       console.log(error.status);
     });
 

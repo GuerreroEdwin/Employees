@@ -1,21 +1,22 @@
 
-
-<h1>holñaaaaaaa</h1>
-
-<div class="card mb-3" style="max-width: 540px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="..." class="img-fluid rounded-start" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">
-              
-          </h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  <div id="card" class="containe" *ngIf="employees">
+    <div  class="card mb-1 " style="max-width: 350px;">
+      <div class="row g-0">
+        <div class="col-md-1">
+          <img [src]="employees | _imagen " class="img-fluid rounded-start" alt="employee by id">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"> {{employees.employee_name}}</h5>
+            <p class="card-text"></p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  
+  <br> 
+  <h5>{{employees | json}}</h5>
+  <br>
+
+  <img [src]="employees | _imagen " alt="employee by id">

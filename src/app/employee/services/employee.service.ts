@@ -4,24 +4,23 @@ import { Observable } from 'rxjs';
 
 
 import { environment } from 'src/environments/environment';
-import { ResponseApi } from 'src/app/interfaces/employee.interface';
-import { Employee } from '../../interfaces/employee.interface';
+import { ResponseApi, ResponseApiById } from 'src/app/interfaces/employee.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeService {
 
-   private baseUrl: string = environment.baseUrl;
+  private baseUrl: string = environment.baseUrl;
 
   constructor( private http: HttpClient ) { }
 
   getEmployees(): Observable <ResponseApi> {
-    return this.http.get<ResponseApi>(`${this.baseUrl}s`);
+    return this.http.get<ResponseApi>(`${this.baseUrl}/employees`);
   }
 
-  getEmployeePorId( id: Employee ):Observable<Employee> {
-    return this.http.get<Employee>(`${ this.baseUrl }/${ id }`);
+  getEmployeePorId( id: number ):Observable <ResponseApiById> {
+    return this.http.get<ResponseApiById>(`${this.baseUrl}/employee/${id}`);
   }
 
 }

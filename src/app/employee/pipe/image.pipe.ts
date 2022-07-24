@@ -1,12 +1,19 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { Employee } from '../../interfaces/employee.interface';
 
 @Pipe({
-  name: 'image'
+  name: '_imagen',
 })
 export class ImagePipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
-  }
+  transform( employees: Employee ): string {
 
+    if(  employees.employee_age > 30 ) {
+      return './assets/img/max30.png';
+    } else {
+      return `./assets/img/min30.png`;
+    }
+
+
+  }
 }
