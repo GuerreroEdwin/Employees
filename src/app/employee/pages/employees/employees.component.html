@@ -1,26 +1,25 @@
-<div class="container">
-    <div id="card"
-        *ngFor="let employee of employees; index as i">
-      <div class="card" style="width:220px;">
-        <!-- <img [src]="employees | _imagen">| -->
-        <div class="card-body">
-          <h5 class="card-title">{{employee.employee_name}}</h5>
+<div class="container content-center" *ngIf="employees">
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+      <div id="card" *ngFor="let employee of employees; index as i">
+
+      <div class="col">
+
+        <div class="card" >
+          <img [src]="employee | _imagen" class="card-img-top" alt="..." >
+          <div class="card-body">
+            <h5 class="card-title">{{employee.employee_name}}</h5>
+            <button type="button" class="btn btn-ligth" (click)="goEmployeeById(employee.id)">
+              Ver mas...
+            </button>
+          </div>
         </div>
-        <button  type="button" 
-                 class="btn btn-ligth"
-                 (click)="goEmployeeById(employee.id)">
-                 Ver mas...
-        </button> 
-       
+
       </div>
     </div>
-  <!-- </div>
-  <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div> -->
-  
+
+  </div>
+</div>
+
+<h1 *ngIf="!employees">Si se puede</h1>
+

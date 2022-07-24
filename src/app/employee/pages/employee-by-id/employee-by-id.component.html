@@ -1,5 +1,25 @@
 
-  <div id="card" class="containe" *ngIf="employees">
+  <div class="container mt-5 mb-5" *ngIf="employees">
+    <div class="card mb-3" style="max-width: 1200px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img [src]="employees | _imagen " class="img-fluid rounded-start" alt="employee by id">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title">Name: {{employees.employee_name}}</h2>
+            <h4 class="card-title">Salary: {{employees.employee_salary}}</h4>
+            <h4 class="card-title">Age{{employees.employee_age}}</h4>
+            <hr>
+            <p class="card-text">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+            <hr>
+            <p class="card-text"><small class="text-muted">Excellent worker </small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div id="card" class="containe" *ngIf="employees">
     <div  class="card mb-1 " style="max-width: 350px;">
       <div class="row g-0">
         <div class="col-md-1">
@@ -15,8 +35,4 @@
       </div>
     </div>
   </div>
-  <br> 
-  <h5>{{employees | json}}</h5>
-  <br>
-
-  <img [src]="employees | _imagen " alt="employee by id">
+  -->

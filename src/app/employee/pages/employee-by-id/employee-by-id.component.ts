@@ -35,23 +35,6 @@ export class EmployeeByIdComponent implements OnInit {
          }
         );
       
-      // this.activatedRoute.params
-      //   .subscribe(({id}) => console.log('Edwin haaaaaaaaaa = '+id) )
-      
-      // const id = this.activatedRoute.snapshot.paramMap.get('id'); 
-      // this.employeeService
-      //   .getEmployeePorId(id)
-      //   .subscribe((employees) => {
-      //     console.log(employees)
-
-      // { this.activatedRoute.paramMap
-      //   .subscribe(params => { this.employees = params.get("id") }) }
-
-      // constructor(route: ActivatedRoute) {
-      //   const id: Observable<string> = route.params.pipe(map(p => p.id));
-      //   const url: Observable<string> = route.url.pipe(map(segments => segments.join('')));
-      //   // route.data incluye tanto `data` como` resolve`
-      //   const user = route.data.pipe(map(d => d.user));
   }
 
 }
