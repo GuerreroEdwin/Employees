@@ -28,7 +28,7 @@ export class EmployeeByIdComponent implements OnInit {
         switchMap ( ({id}) => this._employeeService.getEmployeePorId(id) )).
       subscribe( urlApi => { 
         this.employees = urlApi.data;
-        console.log('Edwinsssssssssssssssssss'+urlApi);
+        console.log('Edwin'+urlApi);
         }
         ,(error: HttpErrorResponse) => {
           console.log(error.status);
