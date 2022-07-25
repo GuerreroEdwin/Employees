@@ -13,7 +13,7 @@ export class ImagePipe implements PipeTransform {
     } else if( employees.employee_age < 30) {
       return `./assets/img/min30.png`;
     } else {
-      return `./assets/img/no-image`;
+      return `./assets/img/no-image.png`;
     }
 
 

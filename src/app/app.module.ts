@@ -8,8 +8,9 @@ import { NavComponent } from './frame/nav/nav.component';
 import { FooterComponent } from './frame/footer/footer.component';
 import { EmployeesComponent } from './employee/pages/employees/employees.component';
 import { EmployeeByIdComponent } from './employee/pages/employee-by-id/employee-by-id.component';
-import { AsyncPipe } from '@angular/common';
 import { ImagePipe } from './employee/pipe/image.pipe';
+import { SpinnerComponent } from './employee/components/spinner/spinner.component';
+import { FooterSocialComponent } from './employee/components/footer-social/footer-social.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,10 @@ import { ImagePipe } from './employee/pipe/image.pipe';
     FooterComponent,
     EmployeesComponent,
     EmployeeByIdComponent,
-    ImagePipe
+    ImagePipe,
+    SpinnerComponent,
+    FooterSocialComponent,
+    
   ],
   imports: [
     BrowserModule,
